@@ -8,10 +8,6 @@ public:
                 j++;
             }
         }
-        while(nums.size()>j){
-            nums.pop_back();
-        }
-        return nums.size();
-        
+        return j;
     }
 };
