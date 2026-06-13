@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool find132pattern(vector<int>& arr) {
+        stack<int> stk;
+        int third=INT_MIN;
+        for(int i=arr.size()-1;i>=0;i-- ){
+            if(third>arr[i]){
+                return true;
+            }
+            while(!stk.empty()&&stk.top()<arr[i]){
+                third=stk.top();
+                stk.pop();
+            }
+            stk.push(arr[i]);
+        }      
+        return false;
+    }
+};
