@@ -27,7 +27,7 @@ public:
                 nums1[i]=q;
             }
             else{
-                nums1[i]=q;
+                nums1[i]=-1;
             }
         }
         return nums1;
